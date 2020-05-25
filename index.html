@@ -11,27 +11,55 @@
 </head>
 
 <body>
-    <table>
-        <tr valign="top">
-            <td width="50%">
-                <fieldset>
-                    <p>
-                        <label>Target color</label> <input class="target" type="text" placeholder="target hex"
-                            value="#00a4d6" />
-                    </p>
-                    <button class="execute">Compute Filters</button>
-                </fieldset>
-                <p>Real pixel, color applied through CSS <code>background-color</code>:</p>
-                <div class="pixel realPixel"></div>
 
-                <p>Filtered pixel, color applied through CSS <code>filter</code>:</p>
-                <div class="pixel filterPixel"></div>
+    <header>
+        <div class="title">
+            CSS Filter Generator
+        </div>
 
-                <p class="filterDetail"></p>
-                <p class="lossDetail"></p>
-            </td>
-        </tr>
-    </table>
+        <div class="note">
+            Convert from black to target hex color
+        </div>
+    </header>
+
+    <div class="input-wrapper">
+        <input class="target" type="text" placeholder="Target Hex Color" required />
+        <button class="execute">Compute Filter</button>
+    </div>
+
+    <div class="samples-wrapper">
+        <div class="real-sample-wrapper">
+
+            <div class="sub-title">
+                Real pixel
+            </div>
+
+            <div class="note">
+                color applied through CSS background-color
+            </div>
+
+            <div class="pixel realPixel"></div>
+        </div>
+
+        <div class="filter-sample-wrapper">
+
+            <div class="sub-title">
+                Filtered pixel
+            </div>
+
+            <div class="note">
+                color applied through CSS filter
+            </div>
+
+            <div class="pixel filterPixel"></div>
+        </div>
+
+    </div>
+
+    <div class="result-wrapper">
+        <div class="filterDetail"></div>
+        <div class="lossDetail"></div>
+    </div>
 
 
 </body>
