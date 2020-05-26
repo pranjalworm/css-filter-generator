@@ -19,24 +19,12 @@ function hexToRgb(hex) {
 $(document).ready(() => {
     $('button.execute').click(() => {
         const rgb = hexToRgb($('input.target').val());
-        if (rgb.length !== 3) {
+        if (!rgb || !rgb.length || rgb.length !== 3) {
             alert('Invalid format!');
             return;
         }
 
-        if (!window.Worker) {
-
-            const color = new Color(rgb[0], rgb[1], rgb[2]);
-            const solver = new Solver(color);
-            let result = { loss: 10 };
-
-            while (result.loss >= 1) {
-                result = solver.solve();
-            }
-        }
-
         const computeWorker = new Worker('compute-worker.js');
-
 
         computeWorker.onmessage = (event) => {
 
