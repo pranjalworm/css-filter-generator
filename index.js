@@ -1,3 +1,5 @@
+const computeWorker = new Worker('compute-worker.js');
+
 function hexToRgb(hex) {
     // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
     const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
@@ -23,8 +25,6 @@ $(document).ready(() => {
             alert('Invalid format!');
             return;
         }
-
-        const computeWorker = new Worker('compute-worker.js');
 
         computeWorker.onmessage = (event) => {
 
