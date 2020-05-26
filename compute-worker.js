@@ -291,7 +291,7 @@ onmessage = function (e) {
 
   const workerResult = {
     result,
-    color
+    color: color.toString()
   }
 
   postMessage(workerResult);

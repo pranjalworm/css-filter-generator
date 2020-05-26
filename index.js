@@ -29,10 +29,9 @@ $(document).ready(() => {
         computeWorker.onmessage = (event) => {
 
             const { data } = event;
+            const { result, color } = data;
 
-            const { result, count, color } = data;
-
-            $('.realPixel').css('background-color', color.toString());
+            $('.realPixel').css('background-color', color);
             $('.filterPixel').attr('style', result.filter);
             $('.filterDetail').text(result.filter);
             $('.lossDetail').html(`Loss: ${result.loss.toFixed(1)}`);
