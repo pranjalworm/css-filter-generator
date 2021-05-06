@@ -2,66 +2,70 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS filter generator to convert from black to target hex color</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="jquery.js"></script>
-    <script type="module" src="index.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS filter generator to convert from black to target hex color</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery.js"></script>
+
 </head>
 
 <body>
 
-    <header>
-        <div class="title">
-            CSS Filter Generator
-        </div>
-
-        <div class="note">
-            Convert from black to target hex color
-        </div>
-    </header>
-
-    <div class="input-wrapper">
-        <input class="target" type="text" placeholder="Target Hex Color" required />
-        <button class="execute">Compute Filter</button>
+  <header>
+    <div class="title">
+      CSS Filter Generator
     </div>
 
-    <div class="samples-wrapper">
-        <div class="real-sample-wrapper">
+    <div class="note">
+      Convert from black to target hex color
+    </div>
+  </header>
 
-            <div class="sub-title">
-                Real pixel
-            </div>
+  <div class="input-wrapper">
+    <input class="target" type="text" placeholder="Target Hex Color" required />
+    <button class="execute">Compute Filter</button>
+  </div>
 
-            <div class="note">
-                color applied through CSS background-color
-            </div>
+  <div class="samples-wrapper">
+    <div class="real-sample-wrapper">
 
-            <div class="pixel realPixel"></div>
-        </div>
+      <div class="sub-title">
+        Real pixel
+      </div>
 
-        <div class="filter-sample-wrapper">
+      <div class="note">
+        color applied through CSS background-color
+      </div>
 
-            <div class="sub-title">
-                Filtered pixel
-            </div>
-
-            <div class="note">
-                color applied through CSS filter
-            </div>
-
-            <div class="pixel filterPixel"></div>
-        </div>
-
+      <div class="pixel realPixel"></div>
     </div>
 
-    <div class="result-wrapper">
-        <div class="filterDetail"></div>
-        <div class="lossDetail"></div>
+    <div class="filter-sample-wrapper">
+
+      <div class="sub-title">
+        Filtered pixel
+      </div>
+
+      <div class="note">
+        color applied through CSS filter
+      </div>
+
+      <div class="pixel filterPixel"></div>
     </div>
 
+  </div>
 
+  <div class="result-wrapper">
+
+    <div class="filterDetail"></div>
+    <button class="copy-button">Copy</button>
+
+    <!-- <div class="lossDetail"></div> -->
+  </div>
+
+
+  <script type="module" src="index.js"></script>
 </body>
 
 </html>

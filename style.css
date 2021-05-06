@@ -41,8 +41,13 @@ header {
     border: 1px solid #1e63c9;
 }
 
-button:hover {
+.copy-button {
+    width: min-content;
+}
+
+.execute:hover, .copy-button:hover {
     cursor: pointer;
+    background: #1b5bb9;
 }
 
 .title {
@@ -74,8 +79,12 @@ button:hover {
 }
 
 .result-wrapper {
+    visibility: hidden;
     width: 80%;
     margin: 0% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .filterDetail,
@@ -83,3 +92,25 @@ button:hover {
     text-align: center;
     margin-bottom: 10px;
 }
+
+.copy-successful {
+    background: #1cad51;
+    border: 1px solid #1cad51;
+}
+
+.copy-successful:hover {
+    background: #1cad51;
+    border: 1px solid #1cad51;
+}
+
+.copy-failed {
+    background: #b81d1d;
+    border: 1px solid #b81d1d;
+}
+
+.copy-failed:hover {
+    background: #b81d1d;
+    border: 1px solid #b81d1d;
+}
+
+
